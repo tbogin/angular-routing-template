@@ -12,7 +12,7 @@ import {FruitService} from '../fruit.service';
 })
 export class FruitComponent implements OnInit {
 
-  @Input() fruit: Fruit;
+  @Input() fruit: Fruit; //receive fruit instance from Fruit List Component
 
   constructor(
     private route: ActivatedRoute,
@@ -25,9 +25,13 @@ export class FruitComponent implements OnInit {
   }
 
   getFruit(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = +this.route.snapshot.paramMap.get('id'); 
     this.fruitService.getFruitById(id)
       .subscribe(fruit => this.fruit = fruit);
+  }
+
+  goBack(){
+    this.location.back();
   }
 
 }

@@ -1,8 +1,7 @@
-<h3>Fruit List</h3>
-
-<ul>
-  <li *ngFor="let fruit of fruits">
-    <a routerLink="/fruit/{{fruit.id}}">
+<ul class="fruit-list">
+  <h3>Fruit List</h3>
+  <li *ngFor="let fruit of fruits" class="fruit-item">
+    <a routerLink="/fruit/{{fruit.id}}" class="fruit-link">
       {{fruit.type}}
     </a>
   </li>
