@@ -13,8 +13,6 @@ export class FruitListComponent implements OnInit {
 
   fruits: Fruit[];
 
-  private selectedId: number;
-
   constructor(
     private service: FruitService
   ){}
